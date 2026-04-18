@@ -268,11 +268,7 @@ function SuccessScreen({ result, form, onReset }) {
 
       <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
         <button onClick={onReset} style={css.resetBtn}>+ Submit Another Ticket</button>
-        {adoUrl && (
-          <a href={adoUrl} target="_blank" rel="noreferrer" style={css.outlineBtn}>
-            Open in ADO ↗
-          </a>
-        )}
+        
       </div>
     </div>
   );
