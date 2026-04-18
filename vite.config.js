@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: '/Anaplan-Support-Portal/',
+  base: '/',
   plugins: [react()],
   server: {
     proxy: {
