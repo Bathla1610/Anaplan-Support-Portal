@@ -114,7 +114,7 @@ function InputField({ label, name, type = "text", placeholder, value, onChange, 
     <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
       <Label required={required}>{label}</Label>
       <div style={{ position: "relative" }}>
-        {icon && <span style={css.fieldIcon}>{icon}</span>}
+        {<span style={css.fieldIcon}>{icon}</span>}
         <input
           type={type} placeholder={placeholder} value={value} autoComplete="off"
           onChange={(e) => onChange(name, e.target.value)}
