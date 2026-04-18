@@ -114,7 +114,7 @@ function InputField({ label, name, type = "text", placeholder, value, onChange, 
     <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
       <Label required={required}>{label}</Label>
       <div style={{ position: "relative" }}>
-        {<span style={css.fieldIcon}>{icon}</span>}
+        {icon && <span style={css.fieldIcon}>{icon}</span>}
         <input
           type={type} placeholder={placeholder} value={value} autoComplete="off"
           onChange={(e) => onChange(name, e.target.value)}
@@ -153,7 +153,7 @@ function CategorySelect({ value, onChange, error }) {
         >
           <option value="" disabled>Select a category…</option>
           {CATEGORIES.map((c) => (
-            <option key={c.value} value={c.value}>{c.icon}  {c.value}</option>
+            <option key={c.value} value={c.value}>{c.value}</option>
           ))}
         </select>
       </div>
