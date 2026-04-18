@@ -59,10 +59,10 @@ async function postToADO(form) {
   const proj = encodeURIComponent(import.meta.env.VITE_ADO_PROJECT);
   const url  = `ado-api/${org}/${proj}/_apis/wit/workitems/${type}?api-version=${ADO.apiVersion}`;
   
-  const res  = await fetch(url, {
+  const res  = await fetch('/api/ado', {
     method:  "POST",
     headers: {
-      "Content-Type":  "application/json-patch+json",
+      "Content-Type":  "application/json",
       "Authorization": `Basic ${btoa(`:${import.meta.env.VITE_ADO_TOKEN}`)}`,
     },
     body: JSON.stringify(buildPatch(form)),
