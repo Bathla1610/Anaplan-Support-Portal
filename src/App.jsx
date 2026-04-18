@@ -284,7 +284,7 @@ function HistoryRow({ h }) {
       </span>
       {p && <span style={{ fontSize: 11, fontWeight: 700, color: p.accent, background: `${p.accent}18`, padding: "2px 9px", borderRadius: 99 }}>{h.priority}</span>}
       {h.id
-        ? <a href={h.url} target="_blank" rel="noreferrer" style={{ color: "#818cf8", fontSize: 12, fontWeight: 700 }}>#{h.id}</a>
+        ? <span style={{ color: "#818cf8", fontSize: 12, fontWeight: 700 }}>#{h.id}</span>
         : <span style={{ color: "#f87171", fontSize: 12 }}>✗ Failed</span>}
       <span style={{ color: "#4b5563", fontSize: 11 }}>{h.time}</span>
     </div>
